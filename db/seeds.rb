@@ -1,10 +1,13 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+studio1  = Studio.create(name: "Equinox", address: "14 Wall St, New York, NY 10005")
+studio2  = Studio.create(name: "NY Health and Racquet", address: "39 Whitehall St, New York, NY 10004")
+studio3  = Studio.create(name: "Yoga to the People", address: "12 St Marks Pl #2R, New York, NY 10003")
+studio4  = Studio.create(name: "Pure Yoga East", address: "203 E 86th St, New York, NY 10028")
+studio5  = Studio.create(name: "Blink Fitness", address: "107 Nassau St, New York, NY 10038")
+studio6  = Studio.create(name: "CrossFit NYC", address: "50 W 28th St, New York, NY 10001")
+studio7  = Studio.create(name: "SLT NYC", address: "137 Fifth Avenue, 2nd floor, New York, NY 10010")
+studio8  = Studio.create(name: "The Movement Fitness", address: "32 W 18th St, New York, NY 10011")
+studio9  = Studio.create(name: "City Row", address: "80 5th Ave #1501, New York, NY 10011")
+studio10 = Studio.create(name: "SoulCycle", address: "126 Leroy St, New York, NY 10014")
 
 course1  = Course.create(title: "Spinning with Carl", instructor: "Carl Sanders", description: "Carl pushes your limits where spinning meets thrill ride status!", studio_id: 10, category_tags: ["cardio", "spin"])
 course2  = Course.create(title: "Rock Climbing", instructor: "Steven Nunez", description: "Climb higher than you've ever climbed before, while working off that cronut you ate this morning.", studio_id: 2, category_tags: ["adventure", "strength-training"])
@@ -13,7 +16,7 @@ course4  = Course.create(title: "Master Class: One Pose", instructor: "Maharishi
 course5  = Course.create(title: "Intro to Bikram Yoga", instructor: "Yogi Bear", description: "Center yourself in this introduction to the classic yoga style. No experience necessary.", studio_id: 4, category_tags: ["yoga", "toning"])
 course6  = Course.create(title: "Blink and You'll Miss It", instructor: "Usain Bolt", description: "Try to keep up!", studio_id: 5, category_tags: ["cardio"])
 course7  = Course.create(title: "CrossFit is CrossFit", instructor: "L Ron Hubbard", description: "CrossFit...come drink the Kool-Aid", studio_id: 6, category_tags: ["cardio", "strength-training", "douchiness"])
-course8  = Course.create(title: "Megaformer", instructor: "", description: "Fifty minutes of heart-pumping, muscle quivering and total body strengthening, lengthening and toning in an inspiring, small-group setting", studio_id: 7, category_tags: ["cardio", "strength-training"])
+course8  = Course.create(title: "Megaformer", instructor: "Brienne of Tarth", description: "Fifty minutes of heart-pumping, muscle quivering and total body strengthening, lengthening and toning in an inspiring, small-group setting", studio_id: 7, category_tags: ["cardio", "strength-training"])
 course9  = Course.create(title: "Move(dance cardio & toning)", instructor: "Cat Deeley", description: "So you think you can dance? Hahaha. Prove it.", studio_id: 8, category_tags: ["dance", "cardio", "toniing"])
 course10 = Course.create(title: "Racing for the Gold", instructor: "Tyler Winklevoss", description: "If you wanted to know what it was like to row for Harvard, this is your chance. I went to Harvard.", studio_id: 9, category_tags: ["rowing", "sports", "cardio"])
 
@@ -27,17 +30,6 @@ customer7  = Customer.create(name: "Odell Beckham Jr.")
 customer8  = Customer.create(name: "LeBron James")
 customer9  = Customer.create(name: "Lindsey Vonn")
 customer10 = Customer.create(name: "Clint Dempsey")
-
-studio1  = Studio.create(name: "Equinox", address: "14 Wall St, New York, NY 10005")
-studio2  = Studio.create(name: "NY Health and Racquet", address: "39 Whitehall St, New York, NY 10004")
-studio3  = Studio.create(name: "Yoga to the People", address: "12 St Marks Pl #2R, New York, NY 10003")
-studio4  = Studio.create(name: "Pure Yoga East", address: "203 E 86th St, New York, NY 10028")
-studio5  = Studio.create(name: "Blink Fitness", address: "107 Nassau St, New York, NY 10038")
-studio6  = Studio.create(name: "CrossFit NYC", address: "50 W 28th St, New York, NY 10001")
-studio7  = Studio.create(name: "SLT NYC", address: "137 Fifth Avenue, 2nd floor, New York, NY 10010")
-studio8  = Studio.create(name: "The Movement Fitness", address: "32 W 18th St, New York, NY 10011")
-studio9  = Studio.create(name: "City Row", address: "80 5th Ave #1501, New York, NY 10011")
-studio10 = Studio.create(name: "SoulCycle", address: "126 Leroy St, New York, NY 10014")
 
 registration1  = Registration.create(customer_id: 1, course_id: 4)
 registration2  = Registration.create(customer_id: 2, course_id: 1)
