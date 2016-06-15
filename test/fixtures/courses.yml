@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  studio: one
+  instructor: MyString
+  title: MyString
+  description: MyText
+  category_tags: 
+
+two:
+  studio: two
+  instructor: MyString
+  title: MyString
+  description: MyText
+  category_tags: 
