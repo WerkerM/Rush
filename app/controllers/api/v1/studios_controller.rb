@@ -6,6 +6,10 @@ module Api
         render json: Studio.includes(:courses, :customers), include: ['courses']
       end
 
+      def show
+        render json: Studio.includes(:courses, :customers).find_by(id: params[:id]), include: ['courses']
+      end
+
       def create
         studio = CreateStudio.call(studio_params, courses_params)
         render json: cocktail, include: ["proportions"]
