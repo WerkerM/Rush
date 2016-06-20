@@ -7,6 +7,7 @@ module Api
 
       def create
         new_course = Course.create!(course_params)
+        render json: new_course
       end
 
       private
