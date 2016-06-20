@@ -3,7 +3,6 @@ module Api
     class SessionsController < ApplicationController
       skip_before_action :authenticate, only: [:create]
       def create
-        binding.pry
         customer = Customer.find_by(email: auth_params[:email])
         if customer && customer.authenticate(auth_params[:password])
           jwt = Auth.issue({customer: customer.id})

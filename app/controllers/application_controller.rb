@@ -21,11 +21,11 @@ class ApplicationController < ActionController::API
   private
 
   def token
-    request.env["HTTP_AUTHORIZATION"].scan(/Bearer
-      (.*)$/).flatten.last
+    request.env["HTTP_AUTHORIZATION"].scan(/Bearer(.*)$/).flatten.last
   end
 
   def auth
+    binding.pry
     Auth.decode(token)
   end
 
