@@ -25,7 +25,6 @@ class ApplicationController < ActionController::API
   end
 
   def auth
-    binding.pry
     Auth.decode(token)
   end
 
