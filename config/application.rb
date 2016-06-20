@@ -18,7 +18,17 @@ Bundler.require(*Rails.groups)
 
 module Rush
   class Application < Rails::Application
-    config.autoload_paths << Rails.root.join('lib') 
     config.api_only = true
+    config.autoload_paths << Rails.root.join('lib') 
+    config.active_record.raise_in_transactional_callbacks = true
+
+    config.middleware.insert_before 0, "Rack::Cors" do
+      allow do
+        origins '*'
+        resource '*',
+          headers: :any,
+          methods: [:get, :post, :put, :patch, :delete, :options, :head]
+      end
+    end
   end
 end
