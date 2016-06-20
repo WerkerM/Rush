@@ -6,4 +6,6 @@ Rails.application.routes.draw do
       resources :studios
     end
   end
+
+  resources :sessions, only [:create, :destroy]
 end
