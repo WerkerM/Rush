@@ -1,7 +1,7 @@
 module Api
   module V1
     class SessionsController < ApplicationController
-      # skip_before_action :authenticate, only: [:create]
+      skip_before_action :authenticate, only: [:create]
       def create
         customer = Customer.find_by(email: auth_params[:email])
         if customer && customer.authenticate(auth_params[:password])
