@@ -11,21 +11,15 @@ module Api
       end
 
       def create
-        studio = CreateStudio.call(studio_params, courses_params)
-        render json: cocktail, include: ["proportions"]
+        studio = Studio.create!(studio_params)
+        render json: studio
       end
 
       private
       def studio_params
-        params.require(:data).require(:attributes).permit(:name, :address)
+        ActiveModelSerializers::Deserialization.jsonapi_parse(params)
       end
 
-      def proportions_params
-        params
-          .require(:data)
-          .require(:courses)
-          .map { |course| proportion["data"]["attributes"]  }
-      end
     end
   end
 end

@@ -16,22 +16,6 @@ module Api
         ActiveModelSerializers::Deserialization.jsonapi_parse(params)
       end
 
-      # private
-      # def course_params
-      #   params
-      #     .require(:data)
-      #     .require(:attributes)
-      #     .permit(:title, :instructor, :description)
-      # end
-      #
-      # def studio_params
-      #   params
-      #     .require(:data)
-      #     .require(:relationships)
-      #     .require(:studio)
-      #     .require(:data)
-      #     .permit(:id)
-      # end
     end
   end
 end
